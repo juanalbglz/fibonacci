@@ -1,0 +1,60 @@
+
+<!-- 
+LICENSED UNDER MPL 2.0
+https://www.mozilla.org/MPL/2.0/
+===========================================
+| AUTHOR  | Juan Alberto Gonz�lez         |
+| WEBSITE | http://macaronesico.com       |
+| CONTACT | macaronesico at gmail dot com |
+===========================================
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Fibonacci</title>
+<style type="text/css">
+.myButton {
+	-moz-box-shadow: 3px 4px 0px 0px #c7dde3;
+	-webkit-box-shadow: 3px 4px 0px 0px #c7dde3;
+	box-shadow: 3px 4px 0px 0px #c7dde3;
+	background-color:transparent;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	border-radius:15px;
+	border:1px solid #383838;
+	display:inline-block;
+	cursor:pointer;
+	color:#7d7d7d;
+	font-family:Courier New;
+	font-size:11px;
+	padding:7px 25px;
+	text-decoration:none;
+}
+.myButton:hover {
+	background-color:transparent;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+</style>
+<script type="text/javascript" src="javascripts/fib.js"></script>
+</head>
+<body>
+<header>
+    <h1>Fibonacci</h1>
+    <p>Fibonacci values</p>
+</header>
+<nav>
+    <form>
+    	<input type="number" min="0"  max="1000" step="1" id="fibonumbers" oninput="showVal(this.value)" onchange="showVal(this.value)">
+    	<a href="#" class="myButton" id="valBox" onclick="get_first_fibonacci();">Get the n-first fibonacci numbers!</a>
+    	<input type="checkbox" id="check" value="check"/><label for="check">Return after each element</label>
+    </form>
+</nav>
+<aside>
+    <div id="results"></div>
+</aside>
+</body>
+</html>
